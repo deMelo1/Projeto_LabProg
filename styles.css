@@ -3,8 +3,15 @@ html, body { height: 100%; }
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color: #1f2937;
-  background: #fbf6f6;
+  color: #ffffff;
+  background-image: url("img/logoGrifo.png");
+  background-size: clamp(1500px, 10000px, 680px);
+  background-repeat: no-repeat;   
+  background-color: #750000;
+}
+
+.title{
+  text-shadow: 2px 3px 2px #000000;
 }
 
 a { color: inherit; text-decoration: none; }
@@ -28,11 +35,11 @@ a { color: inherit; text-decoration: none; }
 
 .breadcrumb {
   font-size: 14px;
-  color: #6b7280;
+  color: #ffffff;
   margin-bottom: 16px;
 }
-.breadcrumb a { color: #374151; }
-.breadcrumb span { margin: 0 6px; color: #9ca3af; }
+.breadcrumb a { color: #ffffff; }
+.breadcrumb span { margin: 0 6px; color: #ffffff; }
 
 
 .grid {
@@ -46,10 +53,11 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   flex-direction: column;
   background: #fff;
-  border: 1px solid #eef0f4;
+  border-radius: 12px;
+  color: #750000;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 1px 2px rgba(16,24,40,.04);
+  box-shadow: 2px 3px 10px rgba(16,24,40,.04);
 }
 .text-card {  
   margin: 0;
@@ -67,10 +75,10 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid transparent;
 }
 .btn {
-  background: #2563eb;
+  background: #750000;
   color: #fff;
 }
-.btn:hover { background: #1f56cc; }
+.btn:hover { background: #000000; }
 .btn-ghost {
   background: #fff;
   border-color: #e5e7eb;
