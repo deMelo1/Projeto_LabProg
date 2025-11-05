@@ -129,3 +129,7 @@ tbody td {
   padding: 12px 14px;
   border-top: 1px solid #f1f3f6;
 }
+
+.table {
+  color: #979797;
+}
