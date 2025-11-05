@@ -1,16 +1,22 @@
-/* ===== Reset e base ===== */
 * { box-sizing: border-box; }
 html, body { height: 100%; }
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color: #1f2937;
-  background: #f6f7fb;
+  color: #ffffff;
+  background-image: url("img/logoGrifo.png");
+  background-size: clamp(1500px, 10000px, 680px);
+  background-repeat: no-repeat;   
+  background-color: #750000;
+}
+
+.title{
+  text-shadow: 2px 3px 2px #000000;
 }
 
 a { color: inherit; text-decoration: none; }
 
-/* ===== Layout ===== */
+
 .container {
   max-width: 980px;
   margin: 0 auto;
@@ -18,41 +24,49 @@ a { color: inherit; text-decoration: none; }
 }
 
 .header {
-  display: flex;
+  display: flex;                 /* <- isso que faltava */
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
   margin-bottom: 16px;
 }
 
-.title { margin: 0; font-size: 28px; letter-spacing: .5px; }
+.title { font-size: 28px; letter-spacing: .5px; }
 
 .breadcrumb {
   font-size: 14px;
-  color: #6b7280;
+  color: #ffffff;
   margin-bottom: 16px;
 }
-.breadcrumb a { color: #374151; }
-.breadcrumb span { margin: 0 6px; color: #9ca3af; }
+.breadcrumb a { color: #ffffff; }
+.breadcrumb span { margin: 0 6px; color: #ffffff; }
 
-/* ===== Cards e grades ===== */
+
 .grid {
   display: grid;
   gap: 16px;
+  min-height: 200px;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   background: #fff;
-  border: 1px solid #eef0f4;
-  border-radius: 14px;
-  padding: 18px;
-  box-shadow: 0 1px 2px rgba(16,24,40,.04);
+  border-radius: 12px;
+  color: #750000;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 3px 10px rgba(16,24,40,.04);
 }
-.card h3 { margin: 0 0 8px; font-size: 18px; }
-.card p { margin: 0 0 16px; color: #4b5563; }
+.text-card {  
+  margin: 0;
+  font-size: 22px; 
+}
+.card p { margin: 13px 0 16px; color: #4b5563; }
 
-/* ===== Botões ===== */
-.btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.btn-row { display: flex; flex-wrap: wrap; }
 .btn, .btn-ghost {
   display: inline-block;
   padding: 10px 14px;
@@ -61,10 +75,10 @@ a { color: inherit; text-decoration: none; }
   border: 1px solid transparent;
 }
 .btn {
-  background: #2563eb;
+  background: #750000;
   color: #fff;
 }
-.btn:hover { background: #1f56cc; }
+.btn:hover { background: #000000; }
 .btn-ghost {
   background: #fff;
   border-color: #e5e7eb;
@@ -72,7 +86,7 @@ a { color: inherit; text-decoration: none; }
 }
 .btn-ghost:hover { background: #f3f4f6; }
 
-/* ===== Formulários ===== */
+
 .form {
   background: #fff;
   border: 1px solid #eef0f4;
@@ -95,7 +109,7 @@ input, select, textarea {
 }
 textarea { min-height: 96px; resize: vertical; }
 
-/* ===== Tabelas ===== */
+
 .table-wrap {
   overflow-x: auto;
   background: #fff;
@@ -115,8 +129,3 @@ tbody td {
   padding: 12px 14px;
   border-top: 1px solid #f1f3f6;
 }
-
-/* ===== Seções auxiliares ===== */
-.section-title { margin: 18px 0 10px; font-size: 20px; }
-.lead { color: #4b5563; margin: 6px 0 20px; }
-.footer { margin-top: 24px; font-size: 12px; color: #9ca3af; text-align: center; }
