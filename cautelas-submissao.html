@@ -20,8 +20,8 @@
     <form class="form" action="#" method="post">
       <div class="form-row">
         <div>
-          <label for="aluno">Aluno</label>
-          <input id="aluno" name="aluno" type="text" />
+          <label for="membro">Membro Responsavel</label>
+          <input id="membro" name="membro" type="text" />
         </div>
         <div>
           <label for="item">Item</label>
@@ -32,16 +32,20 @@
           <input id="quant" name="quant" type="number" min="1" step="1" />
         </div>
         <div>
-          <label for="dataEmp">Data do Empréstimo</label>
-          <input id="dataEmp" name="dataEmp" type="date" />
+          <label for="data">Data</label>
+          <input id="data" name="data" type="date" />
         </div>
         <div>
-          <label for="prevDev">Previsão de Devolução</label>
-          <input id="prevDev" name="prevDev" type="date" />
+          <label for="aluno">Aluno</label>
+          <input id="aluno" name="aluno" type="text" />
         </div>
         <div>
-          <label for="resp">Responsável</label>
-          <input id="resp" name="resp" type="text" />
+          <label for="categoria">Categoria</label>
+          <select id="categoria" name="categoria" required>
+            <option value="" disabled selected>Selecione…</option>
+            <option value="emprestimo">Cautela</option>
+            <option value="devolucao">Descautela</option>
+          </select>
         </div>
       </div>
       <div class="form-row">
