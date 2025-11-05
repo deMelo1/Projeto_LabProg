@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Estoque • Submissão</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <p class="breadcrumb">
+      <a href="index.html">Menu</a> <span>›</span>
+      <a href="estoque.html">Controle de Estoque</a> <span>›</span> Submissão
+    </p>
+    <header class="header">
+      <h1 class="title">Submissão — Estoque de Artigo</h1>
+      <a class="btn-ghost" href="estoque.html">Voltar</a>
+    </header>
+
+    <form class="form" action="#" method="post">
+      <div class="form-row">
+        <div>
+          <label for="data">Data</label>
+          <input id="data" name="data" type="date" />
+        </div>
+        <div>
+          <label for="hora">Hora</label>
+          <input id="hora" name="hora" type="time" />
+        </div>
+        <div>
+          <label for="tipo">Tipo de Movimento</label>
+          <select id="tipo" name="tipo">
+            <option value="entrega">Entrega</option>
+            <option value="retirada">Retirada</option>
+          </select>
+        </div>
+        <div>
+          <label for="artigo">Artigo</label>
+          <input id="artigo" name="artigo" type="text" placeholder="Ex.: Camiseta, Caneca..." />
+        </div>
+        <div>
+          <label for="quantidade">Quantidade</label>
+          <input id="quantidade" name="quantidade" type="number" min="1" step="1" />
+        </div>
+        <div>
+          <label for="responsavel">Membro Responsável</label>
+          <input id="responsavel" name="responsavel" type="text" />
+        </div>
+        <div>
+          <label for="receptor">Receptor</label>
+          <input id="receptor" name="receptor" type="text" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div style="grid-column: 1 / -1;">
+          <label for="obs">Observações</label>
+          <textarea id="obs" name="obs" placeholder="Informações adicionais"></textarea>
+        </div>
+      </div>
+      <div class="btn-row">
+        <button class="btn" type="submit">Salvar</button>
+        <a class="btn-ghost" href="estoque.html">Cancelar</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

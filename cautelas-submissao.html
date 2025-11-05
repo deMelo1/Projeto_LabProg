@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cautelas • Submissão</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <p class="breadcrumb">
+      <a href="index.html">Menu</a> <span>›</span>
+      <a href="cautelas.html">Controle de Cautelas</a> <span>›</span> Submissão
+    </p>
+    <header class="header">
+      <h1 class="title">Submissão — Cautelas</h1>
+      <a class="btn-ghost" href="cautelas.html">Voltar</a>
+    </header>
+
+    <form class="form" action="#" method="post">
+      <div class="form-row">
+        <div>
+          <label for="aluno">Aluno</label>
+          <input id="aluno" name="aluno" type="text" />
+        </div>
+        <div>
+          <label for="item">Item</label>
+          <input id="item" name="item" type="text" placeholder="Ex.: Bola, Violão..." />
+        </div>
+        <div>
+          <label for="quant">Quantidade</label>
+          <input id="quant" name="quant" type="number" min="1" step="1" />
+        </div>
+        <div>
+          <label for="dataEmp">Data do Empréstimo</label>
+          <input id="dataEmp" name="dataEmp" type="date" />
+        </div>
+        <div>
+          <label for="prevDev">Previsão de Devolução</label>
+          <input id="prevDev" name="prevDev" type="date" />
+        </div>
+        <div>
+          <label for="resp">Responsável</label>
+          <input id="resp" name="resp" type="text" />
+        </div>
+      </div>
+      <div class="form-row">
+        <div style="grid-column: 1 / -1;">
+          <label for="obsC">Observações</label>
+          <textarea id="obsC" name="obsC" placeholder="Informações adicionais"></textarea>
+        </div>
+      </div>
+      <div class="btn-row">
+        <button class="btn" type="submit">Salvar</button>
+        <a class="btn-ghost" href="cautelas.html">Cancelar</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
