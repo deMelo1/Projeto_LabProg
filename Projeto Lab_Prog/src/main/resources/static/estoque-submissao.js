@@ -1,4 +1,11 @@
 document.getElementById('btn').addEventListener('click', function(self) {
+    const form = document.querySelector('.form');
+    if (!form.checkValidity()) {
+        self.preventDefault();
+        form.reportValidity(); // opcional, mostra o balãozinho de erro
+        return;
+      }
+
     self.preventDefault();
     var membro = document.getElementById('membro').value;
     var artigo = document.getElementById('artigo').value;
@@ -24,4 +31,5 @@ document.getElementById('btn').addEventListener('click', function(self) {
     .then(function(payload){
         console.log(payload);
     })
+    alert("Enviado com sucesso!");
 })
