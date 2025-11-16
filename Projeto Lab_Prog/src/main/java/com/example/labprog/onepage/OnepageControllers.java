@@ -66,15 +66,4 @@ public class OnepageControllers {
         response.put("quadrado", n*n);
         return response;
     }
-    @PostMapping("/usuarios")
-    public Map<String, String> usuarios(@RequestBody Usuario usuario) {
-        ArrayList<Usuario> users = new ArrayList<>();
-        users.add(usuario);
-        Map<String, String> response = new HashMap<>();
-        response.put("status", "Ok");
-        response.put("mensagem", "Usuário " + usuario.getNome() + " cadastrado com sucesso!");
-        return response;
-    }
-
-    
 }
