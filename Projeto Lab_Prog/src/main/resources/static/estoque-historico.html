@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Estoque • Histórico</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="estoque-historico.js" defer></script>
 </head>
 <body>
   <div class="container">
@@ -29,17 +30,7 @@
             <th>Observações</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>João</td><td>Caneca</td><td>3</td><td>10/09/2025</td><td>Cleiton</td><td>-</td>
-          </tr>
-          <tr>
-            <td>Lucas</td><td>Moletom Fem M</td><td>1</td><td>11/09/2025</td><td>Fernanda</td><td>Recebeu para a Maria</td>
-          </tr>
-          <tr>
-            <td>Antonio</td><td>Corta Vento Masc P</td><td>1</td><td>13/09/2025</td><td>Rogerio</td><td>-</td>
-          </tr>
-        </tbody>
+        <tbody id="tabela-submissoes"></tbody>
       </table>
     </div>
   </div>

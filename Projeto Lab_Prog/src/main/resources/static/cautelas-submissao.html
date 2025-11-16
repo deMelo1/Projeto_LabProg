@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cautelas • Submissão</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="cautelas-submissao.js" defer></script>
 </head>
 <body>
   <div class="container">
@@ -17,27 +18,27 @@
       <a class="btn-ghost" href="cautelas.html">Voltar</a>
     </header>
 
-    <form class="form" action="#" method="post">
+    <form class="form">
       <div class="form-row">
         <div>
           <label for="membro">Membro Responsavel</label>
-          <input id="membro" name="membro" type="text" />
+          <input id="membro" name="membro" type="text" required/>
         </div>
         <div>
           <label for="item">Item</label>
-          <input id="item" name="item" type="text" placeholder="Ex.: Bola, Violão..." />
+          <input id="item" name="item" type="text" placeholder="Ex.: Bola, Violão..." required/>
         </div>
         <div>
-          <label for="quant">Quantidade</label>
-          <input id="quant" name="quant" type="number" min="1" step="1" />
+          <label for="quantidade">Quantidade</label>
+          <input id="quantidade" name="quantidade" type="number" min="1" step="1" required/>
         </div>
         <div>
           <label for="data">Data</label>
-          <input id="data" name="data" type="date" />
+          <input id="data" name="data" type="date" required/>
         </div>
         <div>
           <label for="aluno">Aluno</label>
-          <input id="aluno" name="aluno" type="text" />
+          <input id="aluno" name="aluno" type="text" required/>
         </div>
         <div>
           <label for="categoria">Categoria</label>
@@ -50,12 +51,12 @@
       </div>
       <div class="form-row">
         <div style="grid-column: 1 / -1;">
-          <label for="obsC">Observações</label>
-          <textarea id="obsC" name="obsC" placeholder="Informações adicionais"></textarea>
+          <label for="obs">Observações</label>
+          <textarea id="obs" name="obs" placeholder="Informações adicionais"></textarea>
         </div>
       </div>
       <div class="btn-row">
-        <button class="btn" type="submit">Salvar</button>
+        <button class="btn" id="btn" type="submit">Salvar</button>
         <a class="btn-ghost" href="cautelas.html">Cancelar</a>
       </div>
     </form>

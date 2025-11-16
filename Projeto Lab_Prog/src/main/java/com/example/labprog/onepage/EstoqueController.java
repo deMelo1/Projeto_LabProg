@@ -7,31 +7,31 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.labprog.onepage.entity.Submissoes;
-import com.example.labprog.onepage.repository.SubmissoesRepository;
+import com.example.labprog.onepage.entity.Estoque;
+import com.example.labprog.onepage.repository.EstoqueRepository;
 
 
 @RestController
 @CrossOrigin(origins = "*")
-public class SubmissoesController {
+public class EstoqueController {
 
-    private final SubmissoesRepository submissoesRepository;
+    private final EstoqueRepository submissoesRepository;
 
-    public SubmissoesController(SubmissoesRepository submissoesRepository) {
+    public EstoqueController(EstoqueRepository submissoesRepository) {
         this.submissoesRepository = submissoesRepository;
     }
 
-    @PostMapping("/form-cautela")
-    public ResponseEntity<Submissoes> salvar(@RequestBody Submissoes submissoes) {
+    @PostMapping("/form-estoque")
+    public ResponseEntity<Estoque> salvar(@RequestBody Estoque submissoes) {
         // só pra conferir no console do back-end
         System.out.println("Recebido do front: " + submissoes.getMembro() + " - " + submissoes.getArtigo());
 
-        Submissoes salvo = submissoesRepository.save(submissoes);
+        Estoque salvo = submissoesRepository.save(submissoes);
         return ResponseEntity.ok(salvo); // o fetch faz resp.json() em cima disso
     }
 
     // opcional: pra listar tudo depois e testar
-    @GetMapping("/submissoes")
+    @GetMapping("/estoque")
     public ResponseEntity<?> listar() {
         return ResponseEntity.ok(submissoesRepository.findAll());
     }

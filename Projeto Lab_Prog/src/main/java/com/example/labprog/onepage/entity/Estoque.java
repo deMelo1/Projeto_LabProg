@@ -7,8 +7,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "submissoes") //nome da tabela no banco
-public class Submissoes {
+@Table(name = "estoque") //nome da tabela no banco
+public class Estoque {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,7 +22,7 @@ public class Submissoes {
     private String receptor;
     private String obs;
 
-    public Submissoes() {}
+    public Estoque() {}
 
     // getters e setters
 
