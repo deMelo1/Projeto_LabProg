@@ -14,22 +14,28 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 
-class Aeste {
-    public String nota;
-    public boolean termos;
-    public String email;
+class formsCautela {
+    public String membro;
+    public String artigo;
+    public int quantidade;
+    public String data;
+    public String receptor;
+    public String obs;
 };
 
 @RestController
 @CrossOrigin(origins = "*")
 public class OnepageControllers {
-    @PostMapping(value="/forms")
-    public Map<String, Object> forms(@RequestBody Aeste teste) {
+    @PostMapping(value="/form-cautela")
+    public Map<String, Object> forms_cautela(@RequestBody formsCautela form) {
         Map<String, Object> resp = new HashMap<>();
-    resp.put("nota", teste.nota);
-    resp.put("termos", teste.termos);
-    resp.put("email", teste.email);
-    return resp;
+        resp.put("membro", form.membro);
+        resp.put("artigo", form.artigo);
+        resp.put("quantidade", form.quantidade);
+        resp.put("data", form.data);
+        resp.put("receptor", form.receptor);
+        resp.put("obs", form.obs);
+        return resp;
     }
 
 

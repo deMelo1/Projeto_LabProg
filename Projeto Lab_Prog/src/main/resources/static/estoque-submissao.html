@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Estoque • Submissão</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="estoque-submissao.js" defer></script>
 </head>
 <body>
   <div class="container">
@@ -17,7 +18,7 @@
       <a class="btn-ghost" href="estoque.html">Voltar</a>
     </header>
 
-    <form class="form" action="#" method="post">
+    <form class="form">
       <div class="form-row">
         <div>
           <label for="membro">Membro Responsável</label>
@@ -47,7 +48,7 @@
         </div>
       </div>
       <div class="btn-row">
-        <button class="btn" type="submit">Salvar</button>
+        <button class="btn" id="btn" type="submit">Salvar</button>
         <a class="btn-ghost" href="estoque.html">Cancelar</a>
       </div>
     </form>
