@@ -1,0 +1,2 @@
+C:/Users/ajlei/StudioProjects/front_sms_cortez/front_app_sms_cortez_nuvem/android/app/.cxx/Debug/1o1hj583/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/ajlei/StudioProjects/front_sms_cortez/front_app_sms_cortez_nuvem/android/app/.cxx/Debug/1o1hj583/armeabi-v7a/CMakeFiles/rebuild_cache.dir
