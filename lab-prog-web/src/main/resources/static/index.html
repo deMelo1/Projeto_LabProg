@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tela de Menu</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div>
+        <h1 class="title" style="font-size: 42px; margin: 0;">CENTRAL DE CONTROLE DO GRIFO</h1>
+        <p style="margin: 8px 0 0 0; color: rgba(255, 255, 255, 0.8); font-size: 14px; font-weight: 400;">Sistema de Gestão de Estoque e Cautelas</p>
+      </div>
+      <div class="user-info">
+        <div style="text-align: right; margin-right: 16px;">
+          <div id="usuario-nome" style="color: white; font-weight: 600; font-size: 16px; margin-bottom: 4px;"></div>
+          <div style="color: rgba(255, 255, 255, 0.7); font-size: 12px;">Usuário logado</div>
+        </div>
+        <a class="btn-ghost" href="#" onclick="fazerLogout(); return false;" style="white-space: nowrap;">Sair</a>
+      </div>
+    </header>
+
+            <nav class="grid">
+              <article class="card">
+                <h3 class="text-card">CONTROLE DE ESTOQUE DE ARTIGO</h3>
+                <p>Acompanhe entregas e retiradas de artigos.</p>
+                <div class="btn-row">
+                  <a class="btn" href="estoque.html">Acessar</a>
+                </div>
+              </article>
+
+              <article class="card">
+                <h3 class="text-card">CONTROLE DE CAUTELAS</h3>
+                <p>Registre e monitore as cautelas feitas.</p>
+                <div class="btn-row">
+                  <a class="btn" href="cautelas.html">Acessar</a>
+                </div>
+              </article>
+
+              <article class="card" id="socios-card-membro">
+                <h3 class="text-card">CADASTRO DE SÓCIO</h3>
+                <p>Registre novos sócios da atlética.</p>
+                <div class="btn-row">
+                  <a class="btn" href="cadastro-socio.html">Acessar</a>
+                </div>
+              </article>
+
+              <article class="card" id="socios-card-admin" style="display: none;">
+                <h3 class="text-card">GESTÃO DE SÓCIOS</h3>
+                <p>Gerencie e renove cadastros de sócios.</p>
+                <div class="btn-row">
+                  <a class="btn" href="socios-menu.html">Acessar</a>
+                </div>
+              </article>
+
+              <article class="card" id="gestao-card" style="display: none;">
+                <h3 class="text-card">GESTÃO DE USUÁRIOS</h3>
+                <p>Aprove cadastros e gerencie usuários do sistema.</p>
+                <div class="btn-row">
+                  <a class="btn" href="gestao-geral.html">Acessar</a>
+                </div>
+              </article>
+
+              <article class="card" id="log-atividades-card" style="display: none;">
+                <h3 class="text-card">LOG DE ATIVIDADES</h3>
+                <p>Visualize todas as ações realizadas no sistema.</p>
+                <div class="btn-row">
+                  <a class="btn" href="log-atividades.html">Acessar</a>
+                </div>
+              </article>
+            </nav>
+  </div>
+</body>
+</html>

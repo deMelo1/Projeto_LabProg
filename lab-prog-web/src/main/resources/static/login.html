@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login - Central de Controle do Grifo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="auth-container">
+    <div class="auth-card">
+      <h1 style="text-align: center; color: #750000; margin: 0 0 8px 0; font-size: 28px; font-weight: 700;">CENTRAL DE CONTROLE DO GRIFO</h1>
+      <p style="text-align: center; color: #6b7280; margin: 0 0 32px 0; font-size: 14px;">Sistema de Gestão de Estoque e Cautelas</p>
+      
+      <div class="auth-tabs">
+        <button class="auth-tab active" onclick="mostrarLogin()">Entrar</button>
+        <button class="auth-tab" onclick="mostrarCadastro()">Cadastrar</button>
+      </div>
+
+      <div id="error-message" class="error-message"></div>
+      <div id="success-message" class="success-message"></div>
+
+      <!-- Formulário de Login -->
+      <form id="login-form" class="auth-form active" onsubmit="fazerLogin(event)">
+        <div class="auth-form-group">
+          <label for="login-username">Login</label>
+          <input type="text" id="login-username" required autocomplete="username">
+        </div>
+        <div class="auth-form-group">
+          <label for="login-password">Senha</label>
+          <input type="password" id="login-password" required autocomplete="current-password">
+        </div>
+        <button type="submit" class="auth-submit">Entrar</button>
+      </form>
+
+      <!-- Formulário de Cadastro -->
+      <form id="cadastro-form" class="auth-form" onsubmit="fazerCadastro(event)">
+        <div class="auth-form-group">
+          <label for="cadastro-nome">Nome Completo</label>
+          <input type="text" id="cadastro-nome" required>
+        </div>
+        <div class="auth-form-group">
+          <label for="cadastro-login">Login</label>
+          <input type="text" id="cadastro-login" required autocomplete="username">
+        </div>
+        <div class="auth-form-group">
+          <label for="cadastro-password">Senha</label>
+          <input type="password" id="cadastro-password" required autocomplete="new-password">
+        </div>
+        <div class="auth-form-group">
+          <label for="cadastro-password-confirm">Repetir Senha</label>
+          <input type="password" id="cadastro-password-confirm" required autocomplete="new-password">
+        </div>
+        <div class="auth-form-group">
+          <label for="cadastro-tipo">Função</label>
+          <select id="cadastro-tipo" required>
+            <option value="">Selecione...</option>
+            <option value="ADMIN">Administrador</option>
+            <option value="MEMBRO">Membro</option>
+          </select>
+        </div>
+        <button type="submit" class="auth-submit">Cadastrar</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

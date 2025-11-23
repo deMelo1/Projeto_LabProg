@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gestão de Sócios</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="socios-menu.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div>
+        <h1 class="title" style="font-size: 42px; margin: 0;">GESTÃO DE SÓCIOS</h1>
+        <p style="margin: 8px 0 0 0; color: rgba(255, 255, 255, 0.8); font-size: 14px; font-weight: 400;">Gerencie sócios da atlética</p>
+      </div>
+      <div class="user-info">
+        <div style="text-align: right; margin-right: 16px;">
+          <div id="usuario-nome" style="color: white; font-weight: 600; font-size: 16px; margin-bottom: 4px;"></div>
+          <div style="color: rgba(255, 255, 255, 0.7); font-size: 12px;">Usuário logado</div>
+        </div>
+        <a class="btn-ghost" href="index.html" style="white-space: nowrap;">Voltar</a>
+      </div>
+    </header>
+
+    <nav class="grid">
+      <article class="card">
+        <h3 class="text-card">CADASTRAR NOVO SÓCIO</h3>
+        <p>Registre novos sócios da atlética.</p>
+        <div class="btn-row">
+          <a class="btn" href="cadastro-socio.html">Acessar</a>
+        </div>
+      </article>
+
+      <article class="card" id="gestao-socios-card">
+        <h3 class="text-card">GERENCIAR SÓCIOS</h3>
+        <p>Visualize, edite e exclua registros de sócios.</p>
+        <div class="btn-row">
+          <a class="btn" href="gestao-socios.html">Acessar</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3 class="text-card">RENOVAR FILIAÇÃO</h3>
+        <p>Renove a filiação de sócios existentes.</p>
+        <div class="btn-row">
+          <a class="btn" href="renovacao-socio.html">Acessar</a>
+        </div>
+      </article>
+    </nav>
+  </div>
+</body>
+</html>
+

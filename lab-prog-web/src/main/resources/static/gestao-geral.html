@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gestão de Usuários - Central de Controle do Grifo</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="gestao-geral.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <p class="breadcrumb">
+      <a href="index.html">Menu</a> <span>›</span> Gestão de Usuários
+    </p>
+    <header class="header">
+      <h1 class="title" style="font-size: 35px;">Gestão de Usuários</h1>
+      <a class="btn-ghost" href="index.html">Voltar</a>
+    </header>
+
+    <!-- Cards de opções -->
+    <nav class="grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 32px;">
+      <article class="card">
+        <h3 class="text-card">APROVAÇÃO DE CADASTROS</h3>
+        <p>Aprove ou rejeite cadastros pendentes.</p>
+        <div class="btn-row">
+          <a class="btn" href="#" onclick="mostrarSecao('aprovacoes'); return false;">Acessar</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <h3 class="text-card">GERENCIAR USUÁRIOS</h3>
+        <p>Visualize e gerencie todos os usuários do sistema.</p>
+        <div class="btn-row">
+          <a class="btn" href="#" onclick="mostrarSecao('usuarios'); return false;">Acessar</a>
+        </div>
+      </article>
+    </nav>
+
+    <!-- Seção de Aprovações -->
+    <div id="secao-aprovacoes" style="display: none;">
+      <h2 style="color: white; margin-bottom: 16px; font-size: 24px;">Cadastros Pendentes</h2>
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Login</th>
+              <th>Tipo</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-pendentes">
+            <tr><td colspan="5" style="text-align: center; color: #6b7280; padding: 32px;">Carregando...</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p id="sem-pendentes" style="text-align: center; color: rgba(255,255,255,0.7); padding: 32px; display: none;">Nenhum cadastro pendente.</p>
+    </div>
+
+    <!-- Seção de Usuários -->
+    <div id="secao-usuarios" style="display: none;">
+      <h2 style="color: white; margin-bottom: 16px; font-size: 24px;">Todos os Usuários</h2>
+      <div class="table-wrap">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Login</th>
+              <th>Tipo</th>
+              <th>Status</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-usuarios">
+            <tr><td colspan="6" style="text-align: center; color: #6b7280; padding: 32px;">Carregando...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cautelas • Nova Cautela</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="cautelas-submissao.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <p class="breadcrumb">
+      <a href="index.html">Menu</a> <span>›</span>
+      <a href="cautelas.html">Controle de Cautelas</a> <span>›</span> Nova Cautela
+    </p>
+    <header class="header">
+      <h1 class="title" style="font-size: 35px;">Registrar Nova Cautela</h1>
+      <a class="btn-ghost" href="cautelas.html">Voltar</a>
+    </header>
+
+    <form class="form">
+      <div class="form-row">
+        <div>
+          <label for="item">Item *</label>
+          <select id="item" name="item" required>
+            <option value="">Carregando itens...</option>
+          </select>
+          <small style="display: block; margin-top: 4px;">
+            <a href="cadastro-itens-cautela.html" style="color: #750000; text-decoration: underline;">+ Cadastrar novo item</a>
+          </small>
+        </div>
+        <div>
+          <label for="quantidade">Quantidade *</label>
+          <input id="quantidade" name="quantidade" type="number" min="1" step="1" value="1" required/>
+        </div>
+        <div>
+          <label for="paraQuem">Para Quem *</label>
+          <input id="paraQuem" name="paraQuem" type="text" placeholder="Nome da pessoa" required/>
+        </div>
+        <div>
+          <label for="data">Data *</label>
+          <input id="data" name="data" type="date" required/>
+        </div>
+      </div>
+      <div class="form-row">
+        <div style="grid-column: 1 / -1;">
+          <label for="obs">Observações</label>
+          <textarea id="obs" name="obs" placeholder="Informações adicionais sobre a cautela"></textarea>
+        </div>
+      </div>
+      <div id="aviso-disponibilidade" style="display: none; background: #ffebee; color: #c62828; padding: 12px; border-radius: 8px; margin-bottom: 16px;">
+        <!-- Preenchido via JavaScript -->
+      </div>
+      <div class="btn-row">
+        <button class="btn" id="btn" type="submit">Registrar Cautela</button>
+        <a class="btn-ghost" href="cautelas.html">Cancelar</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

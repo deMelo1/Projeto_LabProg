@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Renovação de Filiação</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="renovacao-socio.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div>
+        <h1 class="title" style="font-size: 42px; margin: 0;">RENOVAÇÃO DE FILIAÇÃO</h1>
+        <p style="margin: 8px 0 0 0; color: rgba(255, 255, 255, 0.8); font-size: 14px; font-weight: 400;">Renove a filiação de sócios</p>
+      </div>
+      <div class="user-info">
+        <div style="text-align: right; margin-right: 16px;">
+          <div id="usuario-nome" style="color: white; font-weight: 600; font-size: 16px; margin-bottom: 4px;"></div>
+          <div style="color: rgba(255, 255, 255, 0.7); font-size: 12px;">Usuário logado</div>
+        </div>
+        <a class="btn-ghost" href="socios-menu.html" style="white-space: nowrap;">Voltar</a>
+      </div>
+    </header>
+
+    <main style="max-width: 600px; margin: 0 auto;">
+      <article class="card">
+        <h3 class="text-card">Renovar Filiação</h3>
+        
+        <form id="form-renovacao" onsubmit="renovarFiliacao(event)" style="display: flex; flex-direction: column; gap: 16px;">
+          <div>
+            <label for="busca-socio" style="display: block; margin-bottom: 8px; font-weight: 500;">Buscar Sócio *</label>
+            <input type="text" id="busca-socio" placeholder="Digite o nome do sócio..." 
+                   autocomplete="off"
+                   style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px;" />
+            <div id="sugestoes" style="position: relative; z-index: 1000;"></div>
+          </div>
+
+          <div id="info-socio" style="display: none; padding: 16px; background-color: #f8f9fa; border-radius: 4px; border-left: 4px solid #007bff;">
+            <h4 style="margin: 0 0 12px 0; color: #333;">Informações do Sócio</h4>
+            <p style="margin: 4px 0;"><strong>Nome:</strong> <span id="socio-nome"></span></p>
+            <p style="margin: 4px 0;"><strong>CPF:</strong> <span id="socio-cpf"></span></p>
+            <p style="margin: 4px 0;"><strong>Turma:</strong> <span id="socio-turma"></span></p>
+            <p style="margin: 4px 0;"><strong>Vencimento Atual:</strong> <span id="socio-vencimento"></span></p>
+            <p style="margin: 4px 0;"><strong>Status:</strong> <span id="socio-status"></span></p>
+            <input type="hidden" id="socio-id" />
+          </div>
+
+          <div id="campo-nova-data" style="display: none;">
+            <label for="novaDataFim" style="display: block; margin-bottom: 8px; font-weight: 500;">Nova Data de Vencimento *</label>
+            <input type="date" id="novaDataFim" name="novaDataFim" required 
+                   style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px;" />
+          </div>
+
+          <div class="btn-row" id="botoes-renovacao" style="display: none; margin-top: 12px;">
+            <button type="submit" class="btn">Renovar Filiação</button>
+            <button type="button" class="btn-ghost" onclick="limparFormulario()">Limpar</button>
+          </div>
+        </form>
+      </article>
+    </main>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,9 @@
+[phases.setup]
+nixPkgs = ["jdk21", "gradle"]
+
+[phases.build]
+cmds = ["chmod +x gradlew", "./gradlew clean build -x test"]
+
+[start]
+cmd = "java -Dserver.port=$PORT -Dspring.profiles.active=prod -jar build/libs/onepage-0.0.1-SNAPSHOT.war"
+

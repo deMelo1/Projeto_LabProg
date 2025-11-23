@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Inventário - Estoque</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="inventario.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="title">INVENTÁRIO DE ESTOQUE</h1>
+    </header>
+
+    <div class="breadcrumb">
+      <a href="index.html">Menu</a>
+      <span>›</span>
+      <a href="estoque.html">Controle de Estoque</a>
+      <span>›</span>
+      <span>Inventário</span>
+    </div>
+
+    <div style="margin-bottom: 24px;">
+      <a class="btn" href="cadastro-itens.html">+ Cadastrar Novo Item</a>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome do Item</th>
+            <th>Categoria</th>
+            <th>Quantidade Atual</th>
+            <th>Descrição</th>
+          </tr>
+        </thead>
+        <tbody id="tabela-inventario">
+          <!-- Preenchido via JavaScript -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="btn-row" style="margin-top: 24px;">
+      <a class="btn-ghost" href="estoque.html">Voltar</a>
+    </div>
+  </div>
+</body>
+</html>
+

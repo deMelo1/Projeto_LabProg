@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cautelas • Histórico</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="cautelas-historico.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <p class="breadcrumb">
+      <a href="index.html">Menu</a> <span>›</span>
+      <a href="cautelas.html">Controle de Cautelas</a> <span>›</span> Histórico
+    </p>
+    <header class="header">
+      <h1 class="title" style="font-size: 35px;">Histórico de Cautelas</h1>
+      <a class="btn-ghost" href="cautelas.html">Voltar</a>
+    </header>
+
+    <div style="margin-bottom: 16px; display: flex; gap: 12px; flex-wrap: wrap;">
+      <input type="text" id="filtro-busca" placeholder="Buscar por item, pessoa..." 
+             style="flex: 1; min-width: 200px; padding: 10px 12px; border: 2px solid #e5e7eb; border-radius: 8px; background: rgba(255,255,255,0.9);">
+      <select id="filtro-status" style="padding: 10px 12px; border: 2px solid #e5e7eb; border-radius: 8px; background: rgba(255,255,255,0.9);">
+        <option value="">Todos os status</option>
+        <option value="ATIVA">Ativa</option>
+        <option value="DEVOLVIDA">Devolvida</option>
+      </select>
+      <input type="date" id="filtro-data-inicio" style="padding: 10px 12px; border: 2px solid #e5e7eb; border-radius: 8px; background: rgba(255,255,255,0.9);">
+      <input type="date" id="filtro-data-fim" style="padding: 10px 12px; border: 2px solid #e5e7eb; border-radius: 8px; background: rgba(255,255,255,0.9);">
+      <button onclick="limparFiltros()" class="btn-ghost" style="white-space: nowrap;">Limpar Filtros</button>
+    </div>
+
+    <div class="table-wrap">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Responsável</th>
+            <th>Item</th>
+            <th>Quantidade</th>
+            <th>Para Quem</th>
+            <th>Data Cautela</th>
+            <th>Status</th>
+            <th>Data Devolução</th>
+            <th>Observações</th>
+            <th id="th-acoes-cautelas" style="display: none;">Ações</th>
+          </tr>
+        </thead>
+        <tbody id="tabela-submissoes"></tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

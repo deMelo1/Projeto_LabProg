@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cadastro de Itens - Cautelas</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="cadastro-itens-cautela.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="title">CADASTRO DE ITENS CAUTELÁVEIS</h1>
+    </header>
+
+    <div class="breadcrumb">
+      <a href="index.html">Menu</a>
+      <span>›</span>
+      <a href="cautelas.html">Controle de Cautelas</a>
+      <span>›</span>
+      <span>Cadastro de Itens</span>
+    </div>
+
+    <form class="form" id="form-item">
+      <div class="form-row">
+        <div>
+          <label for="nome">Nome do Item *</label>
+          <input id="nome" name="nome" type="text" placeholder="Ex.: Violão, Teclado, Bola de Vôlei" required/>
+        </div>
+        <div>
+          <label for="categoria">Categoria</label>
+          <input id="categoria" name="categoria" type="text" placeholder="Ex.: Instrumento, Esporte"/>
+        </div>
+        <div>
+          <label for="quantidadeTotal">Quantidade Total *</label>
+          <input id="quantidadeTotal" name="quantidadeTotal" type="number" min="1" step="1" value="1" required/>
+          <small style="color: #6b7280; font-size: 12px;">Quantos deste item você possui</small>
+        </div>
+      </div>
+      <div class="form-row">
+        <div style="grid-column: 1 / -1;">
+          <label for="descricao">Descrição</label>
+          <textarea id="descricao" name="descricao" placeholder="Descrição detalhada do item"></textarea>
+        </div>
+      </div>
+      <div class="btn-row">
+        <button class="btn" type="submit">Cadastrar Item</button>
+        <a class="btn-ghost" href="cautelas.html">Cancelar</a>
+      </div>
+    </form>
+
+    <h2 style="color: white; margin-top: 48px; margin-bottom: 24px;">Itens Cadastrados</h2>
+    
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Categoria</th>
+            <th>Quantidade Total</th>
+            <th>Descrição</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="tabela-itens">
+          <!-- Preenchido via JavaScript -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
+
