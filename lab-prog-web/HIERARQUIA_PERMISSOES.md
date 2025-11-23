@@ -49,7 +49,7 @@
 - Ver **Inventário** de estoque
 - Ver **"Quem Está Com"** (posse atual de itens cautelados)
 - **Cadastrar novos sócios**
-- **Renovar filiação de sócios**
+- Não pode **Renovar filiação de sócios**
 - Não pode **ver histórico completo** de movimentações de estoque
 - Não pode **ver histórico completo** de cautelas
 - Não pode excluir registros
@@ -114,7 +114,7 @@
 - `AuthController.java` - Validação de permissões de usuário
 - `EstoqueController.java` - Validação TipoUsuario.MASTER/ADMIN
 - `CautelasController.java` - Validação TipoUsuario.MASTER/ADMIN
-- `SocioController.java` - Deletar sócio: MASTER/ADMIN | Ver atrasados/próximos: MASTER/ADMIN | Cadastrar/Renovar: Todos autenticados
+- `SocioController.java` - Deletar sócio: MASTER/ADMIN | Ver atrasados/próximos/Renovar: MASTER/ADMIN | Cadastrar: Todos autenticados
 - `LogAtividadeController.java` - Apenas TipoUsuario.MASTER
 
 ---
