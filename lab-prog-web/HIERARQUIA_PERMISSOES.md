@@ -135,8 +135,8 @@
 | Gestão de Usuários | Sim | Não | Não |
 | Log de Atividades | Sim | Não | Não |
 | Cadastrar Sócio | Sim | Sim | Sim |
-| Renovar Filiação de Sócio | Sim | Sim | Sim |
-| Listar Sócios | Sim | Sim | Sim |
+| Renovar Filiação de Sócio | Sim | Sim | Não |
+| Listar Sócios | Sim | Sim | Não |
 | Deletar Sócio | Sim | Sim | Não |
 | Ver Sócios Atrasados | Sim | Sim | Não |
 | Ver Sócios Próximos ao Vencimento | Sim | Sim | Não |
