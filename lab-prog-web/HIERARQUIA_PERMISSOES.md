@@ -49,6 +49,12 @@
 - Ver **Inventário** de estoque
 - Ver **"Quem Está Com"** (posse atual de itens cautelados)
 - **Cadastrar novos sócios**
+
+### Restrições:
+- **Não vê** o card "Histórico de Movimentações" na página de Estoque
+- **Não vê** o card "Histórico Completo" na página de Cautelas
+- Pode apenas gerenciar suas próprias cautelas ativas
+- **Não vê** o card "Gerenciar Sócios" no menu de sócios (apenas ADMIN e MASTER)
 - Não pode **Renovar filiação de sócios**
 - Não pode **ver histórico completo** de movimentações de estoque
 - Não pode **ver histórico completo** de cautelas
@@ -58,13 +64,6 @@
 - Não pode **deletar sócios**
 - Não pode **ver sócios atrasados ou próximos ao vencimento**
 - Não pode **gerenciar sócios** (página de gestão completa)
-
-### Restrições:
-- **Não vê** o card "Histórico de Movimentações" na página de Estoque
-- **Não vê** o card "Histórico Completo" na página de Cautelas
-- Pode apenas gerenciar suas próprias cautelas ativas
-- **Não vê** o card "Gerenciar Sócios" no menu de sócios (apenas ADMIN e MASTER)
-
 ---
 
 ## Fluxo de Cadastro
