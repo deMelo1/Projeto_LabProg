@@ -11,6 +11,7 @@
 - Controle de Estoque (Cadastro, Entrada/Saída, Histórico completo)
 - Controle de Cautelas (Cadastro, Registro, Histórico completo)
 - Ver Inventário e Posse Atual de Itens
+- **Gestão de Sócios** (Cadastrar, Listar, Renovar, Deletar, Ver atrasados e próximos ao vencimento)
 
 ### Páginas Exclusivas:
 - **Gestão de Usuários** (`gestao-geral.html`) - Aprovação de cadastros + gerenciamento
@@ -26,6 +27,7 @@
 - Controle de Cautelas (Cadastro, Registro, **Histórico completo**)
 - Ver Inventário e Posse Atual de Itens
 - Marcar cautelas como devolvidas (de qualquer usuário)
+- **Gestão de Sócios** (Cadastrar, Listar, Renovar, Deletar, Ver atrasados e próximos ao vencimento)
 - Não pode gerenciar usuários
 - Não pode ver log de atividades
 - Não pode **excluir registros do histórico**
@@ -46,16 +48,22 @@
 - Ver **"Minhas Cautelas"** e devolver seus próprios itens
 - Ver **Inventário** de estoque
 - Ver **"Quem Está Com"** (posse atual de itens cautelados)
+- **Cadastrar novos sócios**
+- **Renovar filiação de sócios**
 - Não pode **ver histórico completo** de movimentações de estoque
 - Não pode **ver histórico completo** de cautelas
 - Não pode excluir registros
 - Não pode gerenciar usuários/logs
 - Não pode marcar cautelas de outros como devolvidas
+- Não pode **deletar sócios**
+- Não pode **ver sócios atrasados ou próximos ao vencimento**
+- Não pode **gerenciar sócios** (página de gestão completa)
 
 ### Restrições:
 - **Não vê** o card "Histórico de Movimentações" na página de Estoque
 - **Não vê** o card "Histórico Completo" na página de Cautelas
 - Pode apenas gerenciar suas próprias cautelas ativas
+- **Não vê** o card "Gerenciar Sócios" no menu de sócios (apenas ADMIN e MASTER)
 
 ---
 
@@ -73,9 +81,12 @@
 ## Segurança
 
 ### Validações Backend:
-- Exclusão de registros: apenas `TipoUsuario.MASTER`
+- Exclusão de registros (estoque/cautelas): apenas `TipoUsuario.MASTER`
 - Gestão de usuários: apenas `TipoUsuario.MASTER`
 - Log de atividades: apenas `TipoUsuario.MASTER`
+- Deletar sócio: apenas `TipoUsuario.MASTER` ou `TipoUsuario.ADMIN`
+- Ver sócios atrasados/próximos ao vencimento: apenas `TipoUsuario.MASTER` ou `TipoUsuario.ADMIN`
+- Cadastrar/Renovar sócio: todos os usuários autenticados
 - Todas as operações validam sessão
 
 ### Validações Frontend:
@@ -96,11 +107,14 @@
 - `index.js` - Mostra cards apenas para MASTER
 - `estoque-historico.js` - Botão excluir apenas para MASTER
 - `cautelas-historico.js` - Botão excluir apenas para MASTER
+- `socios-menu.js` / `socios_menu_page.dart` - Card "Gerenciar Sócios" apenas para ADMIN e MASTER
+- `gestao-socios.js` / `gestao_socios_page.dart` - Acesso apenas para ADMIN e MASTER
 
 ### Backend:
 - `AuthController.java` - Validação de permissões de usuário
 - `EstoqueController.java` - Validação TipoUsuario.MASTER/ADMIN
 - `CautelasController.java` - Validação TipoUsuario.MASTER/ADMIN
+- `SocioController.java` - Deletar sócio: MASTER/ADMIN | Ver atrasados/próximos: MASTER/ADMIN | Cadastrar/Renovar: Todos autenticados
 - `LogAtividadeController.java` - Apenas TipoUsuario.MASTER
 
 ---
@@ -120,6 +134,13 @@
 | Excluir Cautela do Histórico | Sim | Não | Não |
 | Gestão de Usuários | Sim | Não | Não |
 | Log de Atividades | Sim | Não | Não |
+| Cadastrar Sócio | Sim | Sim | Sim |
+| Renovar Filiação de Sócio | Sim | Sim | Sim |
+| Listar Sócios | Sim | Sim | Sim |
+| Deletar Sócio | Sim | Sim | Não |
+| Ver Sócios Atrasados | Sim | Sim | Não |
+| Ver Sócios Próximos ao Vencimento | Sim | Sim | Não |
+| Gerenciar Sócios (página completa) | Sim | Sim | Não |
 
 
 
